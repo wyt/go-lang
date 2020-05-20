@@ -9,8 +9,12 @@ func main() {
 	ch1 := make(chan int)
 	ch2 := make(chan int)
 
-	go func(ch chan int) { <-ch }(ch1)
-	go func(ch chan int) { ch <- 2 }(ch2)
+	go func(ch chan int) {
+		<-ch
+	}(ch1)
+	go func(ch chan int) {
+		ch <- 2
+	}(ch2)
 
 	time.Sleep(time.Second)
 
