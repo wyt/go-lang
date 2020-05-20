@@ -50,3 +50,20 @@ func recv(c <-chan int) {
 		fmt.Println(i)
 	}
 }
+
+// 发送数据
+// chan <- val
+// ch <- 0          // 将0放入通道中
+// ch <- "hello"    // 将字符串放入通道中
+
+// 接收数据
+// [var] <-chan
+
+// 定义只读的channel, 接收数据
+// read_only := make (<-chan int)
+
+// 定义只写的channel, 发送数据
+// write_only := make (chan<- int)
+
+// 可同时读写
+// read_write := make (chan int)
