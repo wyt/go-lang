@@ -27,7 +27,7 @@ func main() {
 		select {
 		case ch1 <- 1:
 			fmt.Println("Send operation on ch1 works!")
-		case <-ch2:
+		case <-ch2: // 判断能否从ch2通道中接收数据
 			fmt.Println("Receive operation on ch2 works!")
 		case ch2 <- 1:
 			fmt.Println("Send operation on ch2 works!")
